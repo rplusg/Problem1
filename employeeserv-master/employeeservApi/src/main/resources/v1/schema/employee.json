@@ -1,0 +1,36 @@
+{
+  "title": "Employee resource",
+  "description": "Employee resource object",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "employee id",
+      "type": "integer"
+    },
+    "first_name": {
+      "description": "first name",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 255
+    },
+    "last_name": {
+      "description": "last name",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 255
+    },
+	"dob": {
+      "description": "date of birth",
+      "type": "Date"
+    },
+    "address": {
+      "description": "employee address",
+      "type": "Address"
+    }    
+  },
+  "required": [
+    "first_name",
+    "last_name",
+    "dob"
+  ]
+}
