@@ -10,9 +10,9 @@
 
 REST Access points:
 
-Get: http://localhost:8080/v1/bfs/employees/20
+- Get: http://localhost:8080/v1/bfs/employees/20
 
-POST: http://localhost:8080/v1/bfs/employees
+- POST: http://localhost:8080/v1/bfs/employees
 
     POST BODY: {
                 "id": "20",
@@ -29,13 +29,15 @@ POST: http://localhost:8080/v1/bfs/employees
                 }
               }
 
-Added PRIMARY KEY during insert on id, feel free to remove it.
+- Added PRIMARY KEY during insert on id, feel free to remove it.
 
-I couldnt use H2 ORM with models, as they are generated on the fly from jsons. Otherwise using with annotations would be easy to solve. 
+- I couldnt use H2 ORM with models, as they are generated on the fly from jsons. Otherwise using with annotations would be easy to solve. 
 
-Currently i'm firing queries from DAO. And this can be easily replaced with ORM.
+- Currently i'm firing queries from DAO. And this can be easily replaced with ORM.
 
-Couldnt cover all corner case validations, happy paths covered.
+- Couldnt cover all corner case validations, happy paths covered.
 
-LLD is pretty extensible based on need. for ex: EmployeeH2DAO can be replaced withh EmployeeOracleDAO without much of fuss.
+- LLD is pretty extensible based on need. for ex: EmployeeH2DAO can be replaced withh EmployeeOracleDAO without much of fuss.
+
+- Implemented only POST and GET but given skeletons for all CRUD operations, designed interfaces for search as well.
 
